@@ -15,7 +15,7 @@ function create() {
 }
 
 function send(channel, ...rest) {
-  if (!win) {
+  if (!controlWin) {
     throw new Error("Please Create MainWindow");
   }
   controlWin.webContents.send(channel, ...rest);
